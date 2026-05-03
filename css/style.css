@@ -1,9 +1,9 @@
 /* --- VARIABLES & FONTS --- */
 :root {
-  --primary-sage: #4f6f52; /* Hijau Sage Gelap */
-  --medium-sage: #739072; /* Hijau Sage Sedang */
-  --light-sage: #86a789; /* Hijau Sage Muda */
-  --soft-cream: #f2f1eb; /* Background Krem Lembut */
+  --primary-sage: #4f6f52; 
+  --medium-sage: #739072;
+  --light-sage: #86a789;
+  --soft-cream: #f2f1eb;
   --white: #ffffff;
   --text-main: #2c3333;
   --text-muted: #525e5e;
@@ -340,7 +340,7 @@ footer {
 
 /* --- MOBILE MENU TOGGLE --- */
 .menu-toggle {
-    display: none; /* Disembunyikan di desktop */
+    display: none; 
     flex-direction: column;
     cursor: pointer;
     gap: 6px;
@@ -357,13 +357,13 @@ footer {
 /* --- RESPONSIVE --- */
 @media (max-width: 850px) {
     .menu-toggle {
-        display: flex; /* Munculkan tombol di layar kecil */
+        display: flex; 
     }
 
     .nav-links {
         position: absolute;
-        top: 100%; /* Turun tepat di bawah navbar */
-        left: -100%; /* Sembunyikan di luar layar kiri */
+        top: 100%; 
+        left: -100%;
         width: 100%;
         background: rgba(242, 241, 235, 0.95);
         backdrop-filter: blur(10px);
@@ -375,7 +375,6 @@ footer {
         box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
     }
 
-    /* Kelas ini akan ditambahkan oleh JavaScript saat tombol diklik */
     .nav-links.active {
         left: 0; 
     }
@@ -394,7 +393,7 @@ footer {
     }
 }
 
-/* Memberi jarak antar kotak ayat agar tidak menempel */
+
 .bible-verse {
   margin-bottom: 2rem;
   padding: 1.5rem;
@@ -416,7 +415,6 @@ footer {
   color: var(--primary-sage);
 }
 
-/* Mengatur tampilan paragraf kesimpulan di bawah ayat */
 .blog-conclusion {
   margin-top: 2.5rem;
   font-weight: 500;
