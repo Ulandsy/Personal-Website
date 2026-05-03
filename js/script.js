@@ -1,16 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // --- 1. MODAL GALLERY (PERBAIKAN) ---
+  // --- 1. MODAL GALLERY  ---
   const modal = document.getElementById("imageModal");
   const modalImg = document.getElementById("imgFull");
   const closeBtn = document.querySelector(".close-modal");
 
-  // Ubah selector agar mendeteksi klik pada pembungkus luar (img-wrapper)
   const galleryWrappers = document.querySelectorAll(".img-wrapper");
 
   if (modal) {
     galleryWrappers.forEach((wrapper) => {
       wrapper.addEventListener("click", () => {
-        // Mengambil sumber gambar dari elemen img di dalam wrapper yang diklik
         const imgElement = wrapper.querySelector("img");
         modal.style.display = "flex";
         modalImg.src = imgElement.src;
@@ -21,7 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
       modal.style.display = "none";
     });
 
-    // Tutup modal jika klik di area hitam
     window.addEventListener("click", (e) => {
       if (e.target == modal) modal.style.display = "none";
     });
@@ -84,10 +81,8 @@ const navLinksList = document.querySelector(".nav-links");
 
 if (mobileMenu) {
   mobileMenu.addEventListener("click", () => {
-    // Menambah atau menghapus class 'active' untuk memunculkan/menyembunyikan menu
     navLinksList.classList.toggle("active");
 
-    // Animasi sederhana untuk ikon hamburger menjadi tanda X (Opsional)
     mobileMenu.classList.toggle("is-active");
   });
 }
