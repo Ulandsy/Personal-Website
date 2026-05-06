@@ -1,6 +1,6 @@
 /* --- VARIABLES & FONTS --- */
 :root {
-  --primary-sage: #4f6f52; 
+  --primary-sage: #4f6f52;
   --medium-sage: #739072;
   --light-sage: #86a789;
   --soft-cream: #f2f1eb;
@@ -340,64 +340,63 @@ footer {
 
 /* --- MOBILE MENU TOGGLE --- */
 .menu-toggle {
-    display: none; 
-    flex-direction: column;
-    cursor: pointer;
-    gap: 6px;
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
 }
 
 .bar {
-    width: 25px;
-    height: 3px;
-    background-color: var(--primary-sage);
-    border-radius: 3px;
-    transition: var(--transition);
+  width: 25px;
+  height: 3px;
+  background-color: var(--primary-sage);
+  border-radius: 3px;
+  transition: var(--transition);
 }
 
 /* --- RESPONSIVE --- */
 @media (max-width: 850px) {
-    .menu-toggle {
-        display: flex; 
-    }
+  .menu-toggle {
+    display: flex;
+  }
 
-    .nav-links {
-        position: absolute;
-        top: 100%; 
-        left: -100%;
-        width: 100%;
-        background: rgba(242, 241, 235, 0.95);
-        backdrop-filter: blur(10px);
-        flex-direction: column;
-        text-align: center;
-        padding: 2rem 0;
-        transition: var(--transition);
-        border-bottom: 2px solid var(--primary-sage);
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
-    }
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    width: 100%;
+    background: rgba(242, 241, 235, 0.95);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 0;
+    transition: var(--transition);
+    border-bottom: 2px solid var(--primary-sage);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+  }
 
-    .nav-links.active {
-        left: 0; 
-    }
+  .nav-links.active {
+    left: 0;
+  }
 
-    .nav-links li {
-        margin: 1.5rem 0;
-    }
+  .nav-links li {
+    margin: 1.5rem 0;
+  }
 
-    .hero,
-    .contact-wrapper {
-        flex-direction: column;
-        text-align: center;
-    }
-    .hero-image {
-        order: -1;
-    }
+  .hero,
+  .contact-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-image {
+    order: -1;
+  }
 }
-
 
 .bible-verse {
   margin-bottom: 2rem;
   padding: 1.5rem;
-  background-color: rgba(134, 167, 137, 0.05); 
+  background-color: rgba(134, 167, 137, 0.05);
   border-radius: 12px;
   border-left: 2px solid var(--light-sage);
 }
@@ -422,4 +421,97 @@ footer {
   border-top: 1px solid rgba(79, 111, 82, 0.1);
   padding-top: 1.5rem;
   line-height: 1.8;
+}
+
+/* Penataan Bio Pribadi */
+.personal-bio {
+  margin-bottom: 0.5rem;
+}
+
+.personal-bio p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.personal-bio strong {
+  color: var(--primary-sage);
+  font-weight: 700;
+}
+
+/* Garis Pemisah Halus */
+.divider {
+  border: 0;
+  border-top: 1px solid rgba(79, 111, 82, 0.1);
+  margin: 1.5rem 0;
+}
+
+/* Penyesuaian Info List agar Ikon Rapi */
+.info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-top: 0;
+}
+
+.info-icon {
+  width: 48px;
+  height: 48px;
+  background-color: var(--soft-cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  border: 1px solid rgba(134, 167, 137, 0.2);
+}
+
+.info-text strong {
+  display: block;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--light-sage);
+  margin-bottom: 2px;
+}
+
+.info-text p,
+.info-text a {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text-main);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.info-text a:hover {
+  color: var(--primary-sage);
+}
+
+/* Tombol Kirim Full Width untuk Form */
+.btn-full {
+  width: 100%;
+  margin-top: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Perbaikan Responsif Khusus Contact */
+@media (max-width: 850px) {
+  .contact-wrapper {
+    gap: 2rem;
+  }
+
+  .info-card,
+  .form-card {
+    padding: 1.5rem;
+  }
 }

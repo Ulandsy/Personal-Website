@@ -39,29 +39,51 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // --- 3. CONTACT FORM VALIDATION ---
+  // --- 3. REAL CONTACT FORM SUBMISSION (FORMSPREE) ---
   const contactForm = document.getElementById("contactForm");
   if (contactForm) {
-    contactForm.addEventListener("submit", (e) => {
+    contactForm.addEventListener("submit", async (e) => {
       e.preventDefault();
 
       const name = document.getElementById("nama").value;
       const email = document.getElementById("email").value;
       const message = document.getElementById("pesan").value;
+      const button = contactForm.querySelector("button");
 
       if (name.trim() === "" || email.trim() === "" || message.trim() === "") {
         alert("Mohon isi semua bidang yang tersedia.");
         return;
       }
 
-      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailPattern.test(email)) {
-        alert("Mohon masukkan format email yang valid.");
-        return;
-      }
+      const originalButtonText = button.innerText;
+      button.innerText = "Mengirim...";
+      button.disabled = true;
 
-      alert(`Terima kasih, ${name}! Pesan Anda telah terkirim (simulasi).`);
-      contactForm.reset();
+      try {
+        const response = await fetch(contactForm.action, {
+          method: contactForm.method,
+          body: new FormData(contactForm),
+          headers: {
+            Accept: "application/json",
+          },
+        });
+
+        if (response.ok) {
+          alert(
+            `Terima kasih, ${name}! Pesan Anda telah berhasil terkirim ke Ulan.`,
+          );
+          contactForm.reset();
+        } else {
+          alert(
+            "Oops! Terjadi kesalahan saat mengirim pesan. Silakan coba lagi nanti.",
+          );
+        }
+      } catch (error) {
+        alert("Terjadi masalah koneksi. Pastikan internet Anda aktif.");
+      } finally {
+        button.innerText = originalButtonText;
+        button.disabled = false;
+      }
     });
   }
 

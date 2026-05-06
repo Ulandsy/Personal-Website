@@ -11,14 +11,27 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="css/style.css" />
 
-    <link rel="shortcut icon" href="ico/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="ico/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="ico/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="ico/favicon-16x16.png">
-    <link rel="manifest" href="ico/site.webmanifest">
+    <link rel="shortcut icon" href="ico/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="ico/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="ico/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="ico/favicon-16x16.png"
+    />
+    <link rel="manifest" href="ico/site.webmanifest" />
   </head>
   <body>
     <nav class="navbar">
@@ -48,49 +61,63 @@
       <div class="contact-wrapper">
         <section class="contact-info fade-in">
           <div class="info-card">
-            <h2>Kontak Saya</h2>
-            <p class="info-desc">
-              Berikut adalah saluran komunikasi yang bisa Anda gunakan untuk
-              menghubungi saya secara langsung.
-            </p>
+            <h2>Tentang Saya</h2>
 
-            <div class="info-item">
-              <div class="info-icon">📧</div>
-              <div class="info-text">
-                <strong>Email</strong>
-                <p>ulandsysohilait@email.com</p>
-              </div>
+            <div class="personal-bio">
+              <p>
+                Halo! Saya <strong>Ulandsy Chanfelzia Sohilait</strong>, namun
+                orang-orang kerap menyapa saya <strong>Ulan</strong>. Lahir di
+                Fakfak, Papua Barat pada 10 Februari 2007, sehingga tahun ini
+                saya berusia 19 tahun dan merupakan anak perempuan pertama dari
+                tiga bersaudara. Saya berdomisili di Manado, Sulawesi Utara,
+              </p>
+              <p style="margin-top: 10px">
+                Saat ini, saya sedang menempuh pendidikan sebagai
+                <strong
+                  >mahasiswi semester 4 Program Studi Teknik Informatika,
+                  Fakultas Teknik, Universitas Sam Ratulangi</strong
+                >. Di sela kesibukan akademik, belakangan ini saya tertarik
+                mendalami pengembangan <em>web development</em>. Menjadi anak
+                sulung membentuk saya menjadi pribadi yang disiplin dan teliti,
+                nilai yang selalu saya terapkan dalam setiap baris kode yang
+                saya susun.
+              </p>
             </div>
 
-            <div class="info-item">
-              <div class="info-icon">📸</div>
-              <div class="info-text">
-                <strong>Instagram</strong>
-                <p>
-                  <a href="https://www.instagram.com/ind_sy" target="_blank"
-                    >@ind_sy</a
-                  >
-                </p>
-              </div>
-            </div>
+            <hr class="divider" />
 
-            <div class="info-item">
-              <div class="info-icon">💬</div>
-              <div class="info-text">
-                <strong>WhatsApp</strong>
-                <p>0822-4899-0817</p>
+            <div class="info-list">
+              <div class="info-item">
+                <div class="info-icon">📧</div>
+                <div class="info-text">
+                  <strong>Email</strong>
+                  <p>ulandsysohilait@email.com</p>
+                </div>
               </div>
-            </div>
-
-            <div class="info-item">
-              <div class="info-icon">📍</div>
-              <div class="info-text">
-                <strong>Alamat</strong>
-                <p>
-                  <a href="https://maps.google.com" target="_blank"
-                    >Jl. P. Sulawesi No.15, Manado</a
-                  >
-                </p>
+              <div class="info-item">
+                <div class="info-icon">📸</div>
+                <div class="info-text">
+                  <strong>Instagram</strong>
+                  <p>
+                    <a href="https://www.instagram.com/ind_sy" target="_blank"
+                      >@ind_sy</a
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon">💬</div>
+                <div class="info-text">
+                  <strong>WhatsApp</strong>
+                  <p>0822-4899-0817</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon">📍</div>
+                <div class="info-text">
+                  <strong>Alamat</strong>
+                  <p>Jl. P. Sulawesi No.15, Manado</p>
+                </div>
               </div>
             </div>
           </div>
@@ -99,12 +126,17 @@
         <section class="contact-form-section fade-in">
           <div class="form-card">
             <h2>Kirim Pesan</h2>
-            <form id="contactForm">
+            <form
+              id="contactForm"
+              action="https://formspree.io/f/xwvyqodl"
+              method="POST"
+            >
               <div class="form-group">
                 <label for="nama">Nama Lengkap</label>
                 <input
                   type="text"
                   id="nama"
+                  name="name"
                   placeholder="Masukkan nama Anda"
                   required
                 />
@@ -115,6 +147,7 @@
                 <input
                   type="email"
                   id="email"
+                  name="email"
                   placeholder="nama@email.com"
                   required
                 />
@@ -124,6 +157,7 @@
                 <label for="pesan">Pesan Anda</label>
                 <textarea
                   id="pesan"
+                  name="message"
                   rows="5"
                   placeholder="Apa yang ingin Anda sampaikan?"
                   required
@@ -140,7 +174,7 @@
     </main>
 
     <footer>
-      <p>&copy; 2026 Ulandsy Chanfelzia Sohilait</p>
+      <p>© 2026 Ulandsy Chanfelzia Sohilait</p>
     </footer>
 
     <script src="js/script.js"></script>
